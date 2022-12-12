@@ -5,8 +5,8 @@ import './styles/userCard.css'
 const UserCard = ({ user, deleteUserById, setUpdateInfo, setCloseForm }) => {
 
     const handleEdit = () => {
-        setUpdateInfo(user)
         setCloseForm(false)
+        setUpdateInfo(user)
     }
 
     return (

@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
+import swal from 'sweetalert'
 
 const useCrud = () => {
 
@@ -21,11 +22,26 @@ const useCrud = () => {
   }
 
   const deleteUserById = (id) => {
-    const URL = `https://users-crud.academlo.tech/users/${id}/`
-    axios.delete(URL)
-      .then(res => getAllUsers())
-      .catch(err => crossOriginIsolated.log(err))
-      alert("Usuario Eliminado Exitosamente")
+    swal({
+      title: "Delete User",
+      text: "Are you sure?",
+      icon: "warning",
+      buttons: ["NO", "SI"]
+    }).then(respuesta => {
+      if (respuesta) {
+        const URL = `https://users-crud.academlo.tech/users/${id}/`
+        axios.delete(URL)
+          .then(res => getAllUsers())
+          .catch(err => crossOriginIsolated.log(err))
+        swal({
+          title: "User deleted",
+          text: "Sorry, User deleted successfully",
+          icon: "success",
+          button: "Accept"
+
+        })
+      }
+    })
   }
 
   const updateUserById = (id, data) => {

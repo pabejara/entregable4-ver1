@@ -30,7 +30,7 @@ function App() {
         <FormUser
           createNewUser={createNewUser}
           updateInfo={updateInfo}
-          updateUserB yId={updateUserById}
+          updateUserById={updateUserById}
           setUpdateInfo={setUpdateInfo}
           setCloseForm={setCloseForm}
         />
