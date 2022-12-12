@@ -1,0 +1,56 @@
+.form-container {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0002;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
+
+.close__form {
+    transform: translateX(-100%);
+}
+
+.App__btn {
+    font-size: 1.2rem;
+    color: white;
+    padding: 0.5em 2em;
+    background-color: #555A88;
+    display: inline-block;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px rgba(1, 42, 117, 0.7);
+    transition: transform 100ms ease;
+}
+.App__btn:hover {
+    transform: scale(1.04);
+}
+.App__btn:active {
+    transform: scale(1);
+    box-shadow: 1px 1px 5px rgba(1, 42, 117, 0.7);
+}
+
+.users__title {
+    color: #555A88;
+    text-align: center;
+}
+
+.user-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    width: 100%;
+    max-width: 1200px;
+    gap: 2em;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3em;
+}
