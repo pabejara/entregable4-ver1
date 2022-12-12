@@ -25,7 +25,7 @@ const useCrud = () => {
     axios.delete(URL)
       .then(res => getAllUsers())
       .catch(err => crossOriginIsolated.log(err))
-      alert("Usuario Eliminado")
+      alert("Usuario Eliminado Exitosamente")
   }
 
   const updateUserById = (id, data) => {
