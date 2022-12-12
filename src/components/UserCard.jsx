@@ -2,10 +2,11 @@ import React from 'react'
 import axios from 'axios'
 import './styles/userCard.css'
 
-const UserCard = ({ user, deleteUserById, setUpdateInfo }) => {
+const UserCard = ({ user, deleteUserById, setUpdateInfo, setCloseForm }) => {
 
     const handleEdit = () => {
         setUpdateInfo(user)
+        setCloseForm(false)
     }
 
     return (
